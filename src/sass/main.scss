@@ -1,0 +1,17 @@
+// Style dla pliku z przykładem HTML fragmentu
+@use './partials/mixins' as *;
+@import './partials/vars';
+@import './partials/global';
+@import './partials/about';
+@import './partials/blog';
+@import './partials/delivery';
+@import './partials/footer';
+@import './partials/header';
+@import './partials/hero';
+@import './partials/modal-contact-us';
+@import './partials/modal-follow';
+@import './partials/mobile-menu';
+@import './partials/nav';
+@import './partials/store';
+@import './partials/vars';
+@import './partials/button';

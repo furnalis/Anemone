@@ -1,0 +1,144 @@
+.footer {
+  font-family: $secondary-font;
+  line-height: 1.2;
+  color: $color-light;
+  background-color: $color-dark;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  &__box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 44px;
+    padding: 0;
+    list-style: none;
+  }
+  @include tablet {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    &__box {
+      flex-wrap: nowrap;
+      gap: 44px;
+      padding: 0;
+      list-style: none;
+    }
+  }
+  @include desktop {
+    padding-top: 72px;
+    padding-bottom: 72px;
+    &__box {
+      flex-wrap: nowrap;
+      gap: 96px;
+      padding: 0;
+      list-style: none;
+    }
+  }
+  &__logo {
+    display: none;
+  }
+  @include desktop {
+    &__logo {
+      display: block;
+      margin-right: 112px;
+      &--light {
+        fill: $svg-light;
+      }
+    }
+  }
+  &__item {
+    color: $color-light;
+    &--transfer {
+      display: flex;
+    }
+  }
+  &__worktime-item {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  @include tablet {
+    &__worktime-item {
+      font-size: 16px;
+    }
+  }
+  @include desktop {
+    &__worktime-item {
+      font-size: 16px;
+    }
+  }
+  &__title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 18px;
+  }
+  @include tablet {
+    &__item {
+      &--transfer {
+        display: inline-flex;
+      }
+    }
+    &__title {
+      font-size: 20px;
+    }
+  }
+  @include desktop {
+    &__item {
+      &--transfer {
+        display: inline-flex;
+      }
+    }
+    &__title {
+      font-size: 20px;
+    }
+  }
+  &__list {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    color: $color-light;
+    width: 128px;
+  }
+  @include tablet {
+    &__list {
+      font-size: 16px;
+      width: auto;
+    }
+  }
+  @include desktop {
+    &__list {
+      font-size: 16px;
+      width: auto;
+    }
+  }
+  &__link {
+    margin-top: 12px;
+    list-style: none;
+  }
+  &__socials {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-right: 32px;
+    &--light {
+      fill: $color-light;
+      margin-right: 24px;
+      margin-bottom: 23px;
+    }
+  }
+  @include tablet {
+    &__socials {
+      flex-direction: column;
+      margin-left: 44px;
+      margin-right: 0;
+    }
+  }
+  @include desktop {
+    &__socials {
+      flex-direction: column;
+      margin-left: 122px;
+      margin-right: 0;
+    }
+  }
+}
+.footer a {
+  color: $color-light;
+}

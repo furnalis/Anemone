@@ -1,0 +1,66 @@
+.header {
+  position: fixed;
+  right: 0;
+  left: 0;
+  background: $color-light;
+  z-index: 20;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 16px 0 16px;
+
+    @include tablet {
+      padding: 24px 24px 0 24px;
+    }
+
+    @include desktop {
+      padding: 28px 24px 0 24px;
+    }
+  }
+
+  &__logo {
+    width: 45px;
+    height: 35px;
+    fill: $svg-dark;
+
+    @include tablet {
+      width: 72px;
+      height: 57px;
+    }
+  }
+
+  &__btn-box {
+    display: flex;
+    align-items: center;
+    column-gap: 18px;
+  }
+
+  &__btn {
+    background-color: inherit;
+    border: none;
+
+    &:last-of-type {
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+
+  &__icon-tel {
+    width: 20px;
+    height: 20px;
+    fill: $svg-dark;
+
+    @include tablet {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  &__icon-burger {
+    width: 18px;
+    height: 16px;
+    // fill: $svg-dark;
+  }
+}

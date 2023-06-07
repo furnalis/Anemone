@@ -1,0 +1,36 @@
+.btn{
+    width: 208px;
+    height: 44px;
+    background: $color-btn;
+    border-radius: 38px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: $color-light;
+    font-family: $main-font;
+    font-size: 20px;
+    line-height: 1.2;
+    margin-top: 32px;
+    @include tablet{
+        width: 280px;
+        height: 64px;
+        margin-top: 60px;
+        font-size: 28px;
+        line-height: 1.16;}
+
+    @include desktop{
+        width: 280px;
+        height: 64px;
+        margin-top: 60px;
+        font-size: 28px;
+        line-height: 1.16;
+    }
+}
+.btn:focus{
+    background: $button-focus;
+}
+.btn:hover{
+    background: $button-hover;
+}

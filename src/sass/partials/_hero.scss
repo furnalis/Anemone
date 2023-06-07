@@ -1,0 +1,100 @@
+.hero {
+  &__container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    padding-right: 0;
+  }
+  &__title {
+    display: none;
+    font-weight: 400;
+    font-size: 52px;
+    font-family: $main-font;
+    position: absolute;
+    bottom: 0;
+    @include tablet {
+      font-size: 120px;
+      bottom: 0;
+    }
+    @include desktop {
+      display: block;
+      font-size: 160px;
+      bottom: -93px;
+    }
+  }
+  &__stitle {
+    display: flex;
+    font-weight: 400;
+    font-size: 52px;
+    font-family: $main-font;
+    position: absolute;
+    bottom: -36px;
+    @include tablet {
+      font-size: 120px;
+      bottom: -94px;
+    }
+    @include desktop {
+      display: none;
+    }
+  }
+  &__mintitle {
+    font-family: $main-font;
+    font-weight: 400;
+    font-size: 14px;
+    max-width: 46px;
+
+    @include tablet {
+      font-size: 24px;
+      max-width: 76px;
+    }
+    @include desktop {
+      font-size: 32px;
+      max-width: 101px;
+    }
+  }
+  &__img {
+    display: block;
+    padding: 0 14px;
+    @include tablet {
+      padding: 0 20px 0 40px;
+    }
+    @include desktop {
+      padding: 0 110px;
+    }
+  }
+  &__btn {
+    border: none;
+    background-color: $color-light;
+    &-svg {
+      width: 76px;
+      height: 76px;
+      @include tablet {
+        width: 150px;
+        height: 150px;
+      }
+      @include desktop {
+        width: 166px;
+        height: 166px;
+      }
+    }
+    &--mo {
+      display: block;
+      @media screen and (min-width: 768px) {
+        display: none;
+      }
+    }
+    &--tb {
+      display: none;
+      @media screen and (min-width: 768px) and (max-width: 1279.59px) {
+        display: block;
+      }
+    }
+    &--dt {
+      display: none;
+      @include desktop {
+        display: block;
+      }
+    }
+  }
+}

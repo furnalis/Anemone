@@ -1,0 +1,217 @@
+.modal {
+  background-color: $color-light;
+  position: absolute;
+  height: 357px;
+  width: 272px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 28px 16px;
+  @include tablet {
+    width: 480px;
+    height: 511px;
+    padding: 48px 32px;
+  }
+  &__closing {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 19px;
+    right: 19px;
+    border-radius: 50%;
+    border: none;
+    background: $color-light;
+    padding: 6px;
+    @include tablet {
+      top: 28px;
+      right: 28px;
+    }
+  }
+  &__icon {
+    width: 12px;
+    height: 12px;
+    @include tablet {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  &__header {
+    font-family: $main-font;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: left;
+    padding-bottom: 14px;
+    @include tablet {
+      font-size: 32px;
+      line-height: 1.219;
+      padding-bottom: 24px;
+    }
+  }
+  &__text {
+    font-size: 12px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    line-height: 1.25;
+    text-align: left;
+    color: $modal-text;
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+  &__label,
+  &__textarea {
+    font-family: $main-font;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: 10px;
+    line-height: 1.2;
+    text-align: left;
+    padding-top: 14px;
+    position: relative;
+    color: $modal-text;
+    gap: 8px;
+    @include tablet {
+      font-size: 14px;
+      padding-top: 24px;
+      line-height: 1.214;
+    }
+  }
+  &__label--padding {
+    padding-bottom: 24px;
+    @include tablet {
+      padding-bottom: 38px;
+    }
+  }
+  &__textarea {
+    padding: 12px 16px;
+    resize: none;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-top: 4px;
+  }
+  &__input {
+    border: 1px solid rgba(215, 215, 215, 1);
+    border-radius: 4px;
+    padding: 10px 0 10px 12px;
+    font-size: 12px;
+    line-height: 1.25;
+    transition-property: border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    color: rgba(0, 0, 0, 0.3);
+    @include tablet {
+      font-size: 14px;
+      line-height: 1.214;
+      padding: 16px 0 16px 16px;
+    }
+    &:hover {
+      border-color: $input-border-hover;
+    }
+    &:focus-visible {
+      outline: none;
+    }
+    &:not(:placeholder-shown):required:valid {
+      border-color: $correct;
+    }
+    &:not(:placeholder-shown):required:valid + .modal__icon--correct {
+      display: flex;
+    }
+    &:not(:placeholder-shown):required:valid
+      + .modal__icon--correct
+      + .modal__icon--error
+      + .modal__text--correct {
+      color: $correct;
+    }
+    &:not(:placeholder-shown):required:invalid {
+      border-color: $invalid;
+    }
+    &:not(:placeholder-shown):required:invalid + .modal__icon--correct + .modal__icon--error {
+      display: flex;
+    }
+    &:not(:placeholder-shown):required:invalid
+      + .modal__icon--correct
+      + .modal__icon--error
+      + .modal__text--error {
+      color: $invalid;
+    }
+  }
+  &__submit {
+    font-family: $main-font;
+    padding: 10px 102px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.244;
+    background: $color-btn;
+    color: $color-light;
+    @include tablet {
+      font-size: 18px;
+      line-height: 1.222;
+      padding: 14px 184px;
+    }
+  }
+  &__icon--correct {
+    position: absolute;
+    right: 16px;
+    bottom: 7px;
+    fill: $correct;
+    display: none;
+    @include tablet {
+      bottom: 14px;
+    }
+  }
+  &__icon--error {
+    position: absolute;
+    right: 16px;
+    bottom: 7px;
+    fill: $invalid;
+    display: none;
+    @include tablet {
+      bottom: 14px;
+    }
+    &-mail {
+      bottom: 32px;
+      @include tablet {
+        bottom: 54px;
+      }
+    }
+  }
+}
+
+/* @include desktop {
+  .modal {
+    height: 357px;
+    width: 272px;
+    padding: 48px 32px;
+    &__closing {
+      top: 28px;
+      right: 28px;
+    }
+    &__icon {
+      width: 16px;
+      height: 16px;
+    }
+    &__header {
+      font-size: 32px;
+      padding-bottom: 24px;
+    }
+    &__text {
+      font-size: 12px;
+    }
+    &__label,
+    &__textarea {
+      font-size: 14px;
+      padding-top: 24px;
+    }
+    &__submit {
+      font-size: 14px;
+    }
+    &__label--padding {
+      padding-bottom: 24px;
+    }
+  }
+} */
